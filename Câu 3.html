@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    function checkVowel(string) {
+        let countA = string.split("a").length - 1;
+        let countUpCaseA = string.split("A").length - 1;
+        let countU = string.split("u").length - 1;
+        let countUpCaseU = string.split("U").length - 1;
+        let countI = string.split("i").length - 1;
+        let countUpCaseI = string.split("I").length - 1;
+        let countO = string.split("o").length - 1;
+        let countUpCaseO = string.split("O").length - 1;
+        let countE = string.split("e").length - 1;
+        let countUpCaseE = string.split("E").length - 1;
+        let countVowel = countA + countU + countI + countE + countO + countUpCaseA + countUpCaseO + countUpCaseE + countUpCaseU + countUpCaseI;
+        if (countVowel == 0) {
+            return "false";
+        } else {
+            return "Tổng số ký tự nguyên âm là: " + countVowel;
+        }
+    }
+
+    let newString = checkVowel("bbbbbbbbbbbbb");
+    document.writeln(newString + "<br>");
+    let newString2 = checkVowel("Anh yeu em Oh yeah BAby");
+    document.writeln(newString2);
+</script>
+</body>
+</html>
